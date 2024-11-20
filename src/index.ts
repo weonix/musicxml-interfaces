@@ -27611,10 +27611,12 @@ function noteToXML(note: Note) {
   }
 
   if (note.ties && note.ties.length) {
-    let tieAttribs = xml` type="${
-      note.ties[0].type === StartStop.Stop ? "stop" : "start"
-    }"`;
-    elements.push(dangerous`<tie${tieAttribs} />`);
+    note.ties.forEach(tie => {
+       let tieAttribs = xml` type="${
+       tie.type === StartStop.Stop ? "stop" : "start"
+      }"`;
+      elements.push(dangerous`<tie${tieAttribs} />`);
+    });
   }
 
   // ...
