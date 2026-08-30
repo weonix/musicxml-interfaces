@@ -320,7 +320,7 @@ var xmlToDoc: (str: string) => Document;
         "xsltproc",
         [
           "--nonet",
-          path.join(__dirname, "..", "vendor", "musicxml-dtd", "parttime.xsl"),
+          path.join(__dirname, "..", "vendor", "musicxml-dtd", "timepart.xsl"),
           "-",
         ],
         {
@@ -346,7 +346,7 @@ var xmlToDoc: (str: string) => Document;
         "xsltproc",
         [
           "--nonet",
-          path.join(__dirname, "..", "vendor", "musicxml-dtd", "parttime.xsl"),
+          path.join(__dirname, "..", "vendor", "musicxml-dtd", "timepart.xsl"),
           "-",
         ],
         {
