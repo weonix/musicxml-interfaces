@@ -320,11 +320,12 @@ var xmlToDoc: (str: string) => Document;
         "xsltproc",
         [
           "--nonet",
-          path.join(__dirname, "..", "vendor", "musicxml-dtd", "timepart.xsl"),
+          path.join(__dirname, "..", "vendor", "musicxml-dtd", "parttime.xsl"),
           "-",
         ],
         {
           input: str,
+          maxBuffer: 1024 * 1024 * 100, 
           env: {
             XML_CATALOG_FILES: path.join(
               __dirname,
